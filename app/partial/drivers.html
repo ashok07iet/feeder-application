@@ -1,0 +1,31 @@
+<div class="container-fluid">
+            
+            <table class="table table-bordered table-condensed table-responsive">
+                <thead>
+                    <tr class="well well-sm">
+                        <th colspan="4">
+                            <div class="row"> 
+                                <div class="col-sm-10">Drivers Championship Standings</div>
+                                <div class="col-sm-2 form-group-sm">
+                                    <input type="text"  class=" form-control input-sm" name="serch" ng-model="nameFilter" placeholder="searche here"/>
+                                </div>
+                            </div> 
+                        </th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="driver in driversList| filter: searchFilter">
+                        <td>{{$index + 1}}</td>
+                        <td>
+                            <img src="img/flags/{{driver.Driver.nationality}}.png" />
+                            <a href="#/drivers/{{driver.Driver.driverId}}">
+                                {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+                            </a>
+                        </td>
+                        <td>{{driver.Constructors[0].name}}</td>
+                        <td>{{driver.points}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
