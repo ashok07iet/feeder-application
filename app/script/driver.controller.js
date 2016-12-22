@@ -15,6 +15,7 @@
             Driverservice.getDriverRaces($scope.id).success(function (response) {
                 $scope.races = response.MRData.RaceTable.Races;
             });
+           
         }]);
 })();
 

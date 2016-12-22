@@ -12,7 +12,8 @@
                 driverAPI.getDrivers = function () {
                     return $http({
                         method: 'Get',
-                        url: 'http://ergast.com/api/f1/2013/driverStandings.json'
+                        url: 'http://ergast.com/api/f1/2013/driverStandings.json',
+                        headers:{'remote-user':'ashok'}
                     });
                 };
                 driverAPI.getDriverDetails = function (id) {
